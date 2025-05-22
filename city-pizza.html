@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>City Pizza Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #3e6b50;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3e6b50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <!-- Logo -->
+            <img src="logo.png" alt="DineHub Logo" class="logo">
+
+            <!-- Site Title -->
+            <h1 class="site-title">DineHub</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="dynamic-menu/">Restaurants</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div style="padding: 60px 20px; text-align: center;">
+        <h1>City Pizza Restaurant</h1>
+        <ul style="list-style: none; padding: 0; display: inline-block;">
+            <li style="background-color: #bc6c25; padding: 15px 20px; margin: 10px; border-radius: 8px; color: white;">Pizza Margherita - 50 SAR</li>
+            <li style="background-color: #bc6c25; padding: 15px 20px; margin: 10px; border-radius: 8px; color: white;">Vegetable Pizza - 40 SAR</li>
+            <li style="background-color: #bc6c25; padding: 15px 20px; margin: 10px; border-radius: 8px; color: white;">Grilled Chicken Pizza - 45 SAR</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 DineHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

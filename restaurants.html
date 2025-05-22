@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Restaurants</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #3e6b50;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Search Box */
+        .search-box {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        /* Restaurant Section */
+        .restaurant-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .restaurant-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .restaurant-list a {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 24px;
+            transition: background 0.3s;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .restaurant-list a:hover {
+            background-color: #cf711f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3e6b50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <!-- Logo and Site Title -->
+            <a href="home.html" style="text-decoration: none; color: white;">
+                <img src="logo.png" alt="DineHub Logo" class="logo">
+                <h1 class="site-title">DineHub</h1>
+            </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Search Box -->
+    <div style="padding: 20px 40px; text-align: right; max-width: 400px; margin: auto;">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for a restaurant...">
+        </div>
+    </div>
+
+    <!-- Restaurant Section -->
+    <div class="restaurant-section">
+        <h1>Our Restaurants</h1>
+        <p style="font-size: 18px; color: #555;">Choose from our list of amazing partners:</p>
+
+        <div class="restaurant-list" id="restaurantList">
+            <a href="town-diner.html">Town Diner</a>
+            <a href="city-pizza.html">City Pizza</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 DineHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Search -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const restaurantLinks = document.querySelectorAll('.restaurant-list a');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            restaurantLinks.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
